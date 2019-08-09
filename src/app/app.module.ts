@@ -10,6 +10,8 @@ import {FormsModule} from '@angular/forms';
 import { DataTableComponent } from './page/data-table/data-table.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { OrderPipe } from './pipe/order.pipe';
 
 const appRoutes: Routes = [
  
@@ -48,6 +50,8 @@ const appRoutes: Routes = [
     DataTableComponent,
     NewUserComponent,
     EditUserComponent,
+    FilterPipe,
+    OrderPipe,
 
   ],
   imports: [

@@ -2,26 +2,27 @@
   <h1>{{ title }}</h1>
   <div class="row">
     <div class="col-6 ">
-        <input class="form-control" type="text" placeholder="Search">
+        <input [(ngModel)]="filterPhrase" 
+         class="form-control" type="text" placeholder="Search">
     </div>
   </div>
-  <button routerLink="/newUser"class="btn btn-secondary">Add new User</button>
+  <button class="btn btn-secondary" routerLink="/newUser"> Add new User</button>
 </div>
 <table class="table">
   <thead>
     <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Active</th>
-      <th>Age</th>
-      <th>Email</th>
-      <th>Phone</th>
+      <th (click)="setSorterKey('id')">#</th>
+      <th (click)="setSorterKey('name.last')">Name</th>
+      <th (click)="setSorterKey('isActive')">Active</th>
+      <th (click)="setSorterKey('age')">Age</th>
+      <th (click)="setSorterKey('email')">Email</th>
+      <th (click)="setSorterKey('phone')">Phone</th>
       <th rowspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
-    <tr *ngFor="let user of userList">
+    <tr *ngFor="let user of userList | filterpipe: filterPhrase:changeCounter | order: orderKey:orderDirection:changeCounter">
       <td>{{ user.id }}</td>
       <td>{{ user.name.last }} {{ user.name.first }}</td>
       <td>{{ user.isActive }}</td>
