@@ -13,6 +13,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { FilterPipe } from './pipe/filter.pipe';
 import { OrderPipe } from './pipe/order.pipe';
 
+
 const appRoutes: Routes = [
  
   {
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     EditUserComponent,
     FilterPipe,
     OrderPipe,
+   
 
   ],
   imports: [

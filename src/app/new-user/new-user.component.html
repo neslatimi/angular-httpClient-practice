@@ -1,7 +1,62 @@
-<p>new-user works!</p>
-<form >
-    <div class="from-group">
-        <label for=""></label>
-            <input type="text" class="form-control">
+<div class="container">
+    <h2>Add New User</h2>
+    <p>Create a brand new user and add them.</p>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="img"> <img
+                    src="https://i.pinimg.com/originals/eb/98/8e/eb988e4cfb1729bb1fe46cbc6c1d8cad.png"
+                    alt="">
+            </div>
+        </div> 
+        <div class="col-sm-12">
+                <form (submit)="onSubmit($event)">
+                        <div class="form-group">
+                            <label for="first">First Name</label>
+                            <input type="text" class="form-control" id="first" placeholder="Enter first name" name="first"
+                                [(ngModel)]="user.name.first">
+                        </div>
+                        <div class="form-group">
+                            <label for="last">Last Name</label>
+                            <input type="text" class="form-control" id="last" placeholder="Enter last name" name="last"
+                                [(ngModel)]="user.name.last">
+                        </div>
+                        <div class="form-group pl-5 pb-1">
+                            <input type="checkbox" class="form-check-input" id="isactive" name="isActive"
+                                [(ngModel)]="user.isActive">
+                            <label class="form-check-label" for="isactive">Check if this user is active</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" class="form-control" id="age" placeholder="Enter age" name="age"
+                                [(ngModel)]="user.age">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <div class="input-group space">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="emailPrepend">@</span>
+                                </div>
+                                <input [(ngModel)]="user.email" name="input" type="email" class="form-control" id="email"
+                                    placeholder="Email" required>
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="phone">Mobile</label>
+                            <div class="input-group space">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="phonePrepend">@</span>
+                                    </div>
+                            <input type="text" class="form-control" id="phone" placeholder="Enter mobile" name="phone"
+                                [(ngModel)]="user.phone">
+                        </div>
+                        </div>
+    
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+        </div>
     </div>
-</form>
+</div>
+
+

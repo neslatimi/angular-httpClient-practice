@@ -1,1 +1,66 @@
-<p>edit-user works!</p>
+<div class="container">
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Edit User</h2>
+            <p>Edit this user and add your changes.</p>
+            <button routerLink="/newUser" type="button" class="btn btn-primary btn-sm">Add new User</button>
+            <div class="row">
+                <div class="col-12">
+                    <img src="https://www.nicepng.com/png/full/9-95905_flower-floral-design-clip-art-clipart-watercolor-flower.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="col-12">
+                <form (submit)="onSubmit($event)">
+                    <div class="form-group">
+                        <label for="first">First Name</label>
+                        <input type="text" class="form-control" id="first" placeholder="Enter first name" name="first"
+                            [(ngModel)]="user.name.first">
+                    </div>
+                    <div class="form-group">
+                        <label for="last">Last Name</label>
+                        <input type="text" class="form-control" id="last" placeholder="Enter last name" name="last"
+                            [(ngModel)]="user.name.last">
+                    </div>
+                    <div class="form-group pl-5 pb-1">
+                        <input type="checkbox" class="form-check-input" id="isactive" name="isActive"
+                            [(ngModel)]="user.isActive">
+                        <label class="form-check-label" for="isactive">Check if this user is active</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" id="age" placeholder="Enter age" name="age"
+                            [(ngModel)]="user.age">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group space">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="emailPrepend">@</span>
+                            </div>
+                            <input [(ngModel)]="user.email" name="input" type="email" class="form-control" id="email"
+                                placeholder="Email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Mobile</label>
+                        <div class="input-group space">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="phonePrepend">@</span>
+                                </div>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter mobile" name="phone"
+                            [(ngModel)]="user.phone">
+                    </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

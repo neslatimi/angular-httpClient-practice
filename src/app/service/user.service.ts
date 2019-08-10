@@ -9,10 +9,13 @@ import { User } from '../model/user';
 export class UserService {
 
   jsonUrl: string = 'http://localhost:3000/user';
+  list: User[] ;
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+    
+   }
 
   getAll(): Observable<User[]> {
     return this.http.get<User[]>(this.jsonUrl);
@@ -23,4 +26,21 @@ export class UserService {
   remove(id:number):Observable<User>{
     return this.http.delete<User>(`${this.jsonUrl}/${id}`)
   }
+  update(user:User):Observable<User>{
+    
+    return this.http.put<User>(`${this.jsonUrl}/${user.id}`,user);
+  }
+  getOne(id: number): Observable<User> {
+    return this.http.get<User>(`${this.jsonUrl}/${id}`);
+  }
+/*
+  get(id: number): User {
+    return this.list.filter( user => user.id == id )[0] || new User();
+  }*/
+  
+  edit(user, id): Observable<User[]> {
+    return this.http.put<User[]>(`${this.jsonUrl}/${id}`, user);
+  }
+  
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/service/user.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-data-table',
@@ -19,12 +20,16 @@ export class DataTableComponent implements OnInit, OnDestroy {
   orderKey:string="";
   orderDirection:number=1;
 
-  constructor(private userService: UserService) { }
+
+  constructor(private userService: UserService,
+    private activeRoute:ActivatedRoute,
+    private router:Router) { }
 
   ngOnInit() {
     this.userSubscription = this.userService.getAll().subscribe(
       users => this.userList = users
     );
+    
   }
 
   ngOnDestroy() {
@@ -65,4 +70,10 @@ export class DataTableComponent implements OnInit, OnDestroy {
     }
     this.orderKey=key;
   }
+  editUser(user:User){
+    console.log(user.id)
+    this.router.navigate(['/tableEdit',user.id]);
+    return user.id
+  }
+  
 }
