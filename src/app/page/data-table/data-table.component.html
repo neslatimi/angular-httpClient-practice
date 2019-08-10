@@ -5,13 +5,14 @@
       <input [(ngModel)]="filterPhrase"  type="text" class="form-control" placeholder="Search">
     </div>
   </div>
-  <button class="btn btn-secondary" routerLink="/newUser"> Add new User</button>
+  <button class="btn btn-secondary" routerLink="/newUser"> Add new User
+    <img src="https://img.icons8.com/color/48/000000/add-user-group-woman-man.png"></button>
 </div>
 <table class="table">
   <thead>
     <tr>
       <th (click)="setSorterKey('id')">#</th>
-      <th (click)="setSorterKey('name.last')">Name</th>
+      <th (click)="setSorterKey('name')">Name</th>
       <th (click)="setSorterKey('isActive')">Active</th>
       <th (click)="setSorterKey('age')">Age</th>
       <th (click)="setSorterKey('email')">Email</th>
@@ -31,12 +32,14 @@
       <td>
         <button (click)="editUser(user)"
                   class="btn btn-info">
-                Edit
+                Edit 
+                <img src="https://img.icons8.com/color/48/000000/edit-user-female.png">
         </button>
       </td>
       <td>
         <button (click)="openModal(user)"
-          class="btn btn-danger">Delete</button>         
+          class="btn btn-danger">Delete
+          <img src="https://img.icons8.com/color/48/000000/remove-user-male.png"></button>         
       </td>
        </tr>
   </tbody>
@@ -56,11 +59,11 @@
         </div>
         <div class="modal-body">
           <p>This action will delete the selected user:
-            <br>
+          <br>
             ID number: {{userID.id}},
             <br>
             name: {{userID.name.last}} {{userID.name.first}}
-            <br>
+            <br> 
             Are you sure? </p>
         </div>
         <div class="modal-footer">

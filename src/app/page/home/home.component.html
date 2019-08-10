@@ -1,7 +1,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="space card border-primary mb-3" style="max-width: 20rem;">
-            <div class="card-header">Header</div>
+            <div class="card-header">
+                    <img src="https://img.icons8.com/color/48/000000/group.png">
+            </div>
             <div class="card-body">
                 <h4 class="card-title">How many Users do we have?</h4>
                 <p class="card-text">Number of users:
@@ -10,9 +12,11 @@
             </div>
         </div>
         <div class=" space card border-secondary mb-3" style="max-width: 20rem;">
-            <div class="card-header">Header</div>
+            <div class="card-header">
+                    <img src="https://img.icons8.com/color/48/000000/weightlift.png">
+            </div>
             <div class="card-body">
-                <h4 class="card-title">Secondary card title</h4>
+                <h4 class="card-title">Our User activity</h4>
                 <p class="card-text">Active user number:
                     <span class="badge badge-primary badge-pill">{{ listUserActive}}</span>
                 </p>
@@ -22,25 +26,36 @@
             </div>
         </div>
         <div class=" space card border-success mb-3" style="max-width: 20rem;">
-            <div class="card-header">Header</div>
+            <div class="card-header">
+                    <img src="https://img.icons8.com/color/48/000000/money-box.png">
+            </div>
             <div class="card-body">
-                <h4 class="card-title">Success card title</h4>
+                <h4 class="card-title">The total money balance:</h4>
                 <p class="card-text">Balance of money:
-                    <span class="badge badge-primary badge-pill">{{sumBalance}}</span>
+                    <span class="badge badge-primary badge-pill">{{sumBalance | currency:"USD"}}</span>
+                    <img src="https://img.icons8.com/color/48/000000/banknotes.png">
                 </p>
             </div>
         </div>
         <div class=" space card border-danger mb-3" style="max-width: 20rem;">
-            <div class="card-header">Header</div>
+            <div class="card-header">
+                    <img src="https://img.icons8.com/color/48/000000/facebook-like.png">
+            </div>
             <div class="card-body">
                 <h4 class="card-title">Ours user's favourite fruits</h4>
-                <p class="card-text">Number of apple's lovers:
+                <p class="card-text">Number of 
+                        <img src="https://img.icons8.com/color/48/000000/apple.png">
+                    lovers:
                     <span class="badge badge-primary badge-pill">{{appleLover}}</span>
                 </p>
-                <p class="card-text">Number of banana's lovers:
+                <p class="card-text">Number of 
+                        <img src="https://img.icons8.com/color/48/000000/banana.png">
+                    lovers:
                     <span class="badge badge-primary badge-pill">{{bananaLover}}</span>
                 </p>
-                <p class="card-text">Number of strawberry's lovers:
+                <p class="card-text">Number of 
+                        <img src="https://img.icons8.com/color/48/000000/strawberry.png">
+                    lovers:
                     <span class="badge badge-primary badge-pill">{{strawberryLover}}</span>
                 </p>
             </div>
