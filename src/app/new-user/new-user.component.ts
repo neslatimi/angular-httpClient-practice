@@ -17,6 +17,8 @@ export class NewUserComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+
   onSubmit(event: Event): void {
     event.preventDefault();
     this.userService.create(this.user).subscribe(
@@ -24,15 +26,5 @@ export class NewUserComponent implements OnInit {
              this.router.navigateByUrl("/table")}
     );
   }
- /* onSubmit(ev: Event): void {
-    ev.preventDefault();
-    this.userService.addnewUser(this.newUser).subscribe(
-      response => {
-        this.newUser = new User();
-        this.router.navigateByUrl("/users")
-      },
-      err => console.error(err),
-    )
-  }
-*/
+ 
 }

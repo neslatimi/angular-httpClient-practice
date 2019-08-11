@@ -19,6 +19,8 @@ export class DataTableComponent implements OnInit, OnDestroy {
   filterPhrase:string="";   //keresési tartalom
   orderKey:string="";
   orderDirection:number=1;
+  displayUp='inline';
+  displayDown='none';
 
 
   constructor(private userService: UserService,
@@ -72,5 +74,12 @@ export class DataTableComponent implements OnInit, OnDestroy {
     this.router.navigate(['/tableEdit',user.id]);
     return user.id
   }
-  
+  hideUp(){
+    this.displayUp="none",
+    this.displayDown="inline"
+  }
+  showDown(){
+    this.displayUp="inline",
+    this.displayDown="none"
+  }
 }

@@ -1,4 +1,7 @@
 img{
     height: auto;
-    width: 50%;
+    width: 40%;
+}
+.btn-primary{
+    margin:50px;
 }

@@ -2,7 +2,8 @@
     <div class="row">
         <div class="space card border-primary mb-3" style="max-width: 20rem;">
             <div class="card-header">
-                    <img src="https://img.icons8.com/color/48/000000/group.png">
+                <img src="https://img.icons8.com/color/48/000000/group.png">
+                Users
             </div>
             <div class="card-body">
                 <h4 class="card-title">How many Users do we have?</h4>
@@ -13,7 +14,8 @@
         </div>
         <div class=" space card border-secondary mb-3" style="max-width: 20rem;">
             <div class="card-header">
-                    <img src="https://img.icons8.com/color/48/000000/weightlift.png">
+                <img src="https://img.icons8.com/color/48/000000/weightlift.png">
+                Activity
             </div>
             <div class="card-body">
                 <h4 class="card-title">Our User activity</h4>
@@ -27,7 +29,8 @@
         </div>
         <div class=" space card border-success mb-3" style="max-width: 20rem;">
             <div class="card-header">
-                    <img src="https://img.icons8.com/color/48/000000/money-box.png">
+                <img src="https://img.icons8.com/color/48/000000/money-box.png">
+                Cash flow
             </div>
             <div class="card-body">
                 <h4 class="card-title">The total money balance:</h4>
@@ -39,26 +42,62 @@
         </div>
         <div class=" space card border-danger mb-3" style="max-width: 20rem;">
             <div class="card-header">
-                    <img src="https://img.icons8.com/color/48/000000/facebook-like.png">
+                <img src="https://img.icons8.com/color/48/000000/facebook-like.png">
+                Favoutites
             </div>
             <div class="card-body">
                 <h4 class="card-title">Ours user's favourite fruits</h4>
-                <p class="card-text">Number of 
-                        <img src="https://img.icons8.com/color/48/000000/apple.png">
+                <p class="card-text">Number of
+                    <img src="https://img.icons8.com/color/48/000000/apple.png">
                     lovers:
                     <span class="badge badge-primary badge-pill">{{appleLover}}</span>
                 </p>
-                <p class="card-text">Number of 
-                        <img src="https://img.icons8.com/color/48/000000/banana.png">
+                <p class="card-text">Number of
+                    <img src="https://img.icons8.com/color/48/000000/banana.png">
                     lovers:
                     <span class="badge badge-primary badge-pill">{{bananaLover}}</span>
                 </p>
-                <p class="card-text">Number of 
-                        <img src="https://img.icons8.com/color/48/000000/strawberry.png">
+                <p class="card-text">Number of
+                    <img src="https://img.icons8.com/color/48/000000/strawberry.png">
                     lovers:
                     <span class="badge badge-primary badge-pill">{{strawberryLover}}</span>
                 </p>
             </div>
         </div>
     </div>
+</div>
+<div class="container">
+        <div class="row">
+                <div class="col-12">
+                    <div class="card border-dark mb-3" >
+                        <div class="card-header">Statistics</div>
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <img src="https://img.icons8.com/color/48/000000/apple.png">
+                            <div class="progress">
+                                Apple:
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width.%':appleLover}"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <br>
+                            <img src="https://img.icons8.com/color/48/000000/banana.png">
+                            <div class="progress">
+                                Banana:
+                                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{'width.%':bananaLover}"
+                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <br>
+                            <img src="https://img.icons8.com/color/48/000000/strawberry.png">
+                            <div class="progress">
+                                Strawberry:
+                                <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" [ngStyle]="{'width.%':strawberryLover}"
+                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </div>

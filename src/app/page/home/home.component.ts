@@ -14,13 +14,17 @@ export class HomeComponent implements OnInit {
   bananaLover:number=0;
   strawberryLover:number=0;
 
+
   constructor(private userService: UserService) {
     this.numberOfUser();
     this.numberOfActive();
     this.totalBalance();
     this.fruitLovers();
+
   }
-  ngOnInit() { }
+  ngOnInit() { 
+    
+  }
 
   numberOfUser() {
     this.userService.getAll().subscribe(users => {
